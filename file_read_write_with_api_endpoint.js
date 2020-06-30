@@ -4,7 +4,7 @@ const app = express();
 const port = 3000;
 //API to create file 
 app.get("/", (req, res) => {
-  fs.writeFile("date-time.txt", fileInside(), (err) => {
+  fs.writeFile("files/date-time.txt", fileInside(), (err) => {
     if (err) throw err;
   });
   function fileInside() {
@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
 });
 //API to display all files 
 app.get("/content", (req, res) => {
-   fs.readdir("/Users/Hp/Desktop/Nodejs", (err, files) => {
+   fs.readdir("/Users/Hp/Desktop/Nodejs/files", (err, files) => {
     if (err) throw err;
     res.send(files);
   });
