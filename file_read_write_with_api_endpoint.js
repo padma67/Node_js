@@ -17,7 +17,7 @@ app.get("/", (req, res) => {
 });
 //API to display all files 
 app.get("/content", (req, res) => {
-   fs.readdir("date-time.txt", (err, files) => {
+   fs.readdir("/Users/Hp/Desktop/Nodejs", (err, files) => {
     if (err) throw err;
     res.send(files);
   });
